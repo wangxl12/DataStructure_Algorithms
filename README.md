@@ -1,6 +1,6 @@
 # DataStructure_Algorithms
 ...or create a new repository on the command line
-echo "# -" >> README.md
+`echo "# -" >> README.md`
 
 git init  # to transfer the current file to repository
 
