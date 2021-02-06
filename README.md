@@ -1,5 +1,6 @@
 # DataStructure_Algorithms
-...or create a new repository on the command line
+Nothing special in readme ... in this repository i just review all the datastructure as well as algorithms needed in graduate MBA
+## ...or create a new repository on the command line
 
 `echo "# -" >> README.md`
 
@@ -16,7 +17,7 @@
 `git push -u origin main`
 
 
-...or push an existing repository from the command line 
+## ...or push an existing repository from the command line 
 
 `git remote add origin https://github.com/wangxl12/DataStructure_Algorithm.git`
 
