@@ -11,6 +11,8 @@ https://blog.csdn.net/techflow/article/details/109352820
 # git branch用法总结，查看、新建、删除、重命名  
 https://blog.csdn.net/afei__/article/details/51567155  
 origin即远程仓库的别名  
+# 如何看log  
+https://www.cnblogs.com/missdx/p/12343771.html  
 - 创建分支：  
 `git branch <branch name>`  
 - 查看各个分支所指向的对象  
