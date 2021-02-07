@@ -51,11 +51,11 @@ origin即远程仓库的别名
 
 `git commit -m "first commit"  # to commit the all files to local repository`
 
-`git branch -M main`
+`git branch -M main` # 将当前的分支重命名为main
 
-`git remote add origin https://github.com/wangxl12/DataStructure_Algorithms.git`
+`git remote add origin https://github.com/wangxl12/DataStructure_Algorithms.git` # 将远程仓库添加进来，并起别名为origin
 
-`git push -u origin main`  # 将会关联到远程的main 分支上，以后就可以git push不指定参数了
+`git push -u origin main`  # 将会关联到远程的main 分支上，以后就可以git push不指定参数了（使用了-u），以后就默认关联到远程仓库的main分支上，远程仓库的其他分支可以有，只是作为备份使用的.
 
 
 ## ...or push an existing repository from the command line 
