@@ -18,6 +18,16 @@ git在执行命令`git init`指令的之后就会自动创建一个分支master�
 `git status`  
 - 查看当前分支  
 `git branch`  
+- 切换分支  
+`git switch <branch name>`  
+- 切换分支，如果分支不存在，先创建一个分支，然后再切换  
+`git switch -c <branch name>`  
+- 查看本地所有分支  
+`git branch`  
+- 查看远程所有分支  
+`git branch -r`  
+- 查看本地和远程所有分支  
+`git branch -a`  
 ## ...or create a new repository on the command line
 
 `echo "# -" >> README.md`
