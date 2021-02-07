@@ -5,6 +5,7 @@ https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%8
 git在执行命令`git init`指令的之后就会自动创建一个分支master，master分支和其他的自己新建的分支相比没有什么特殊的地方。这里所说的master是以前的版本有，但是现在为了某种原因，需要在初始化仓库之后，将master强制转换为main，即命令`git branch -M main`的作用。  
 # 关联本地分支与远程分支  
 https://www.cnblogs.com/a-flydog/p/5520999.html  
+`git pull origin master:feature-wxDemo`    #git pull <远程主机名> <远程分支名>:<本地分支名>  
 # 本地分支与远程分支的关系
 https://blog.csdn.net/techflow/article/details/109352820  
 # git branch用法总结，查看、新建、删除、重命名  
