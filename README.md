@@ -5,26 +5,19 @@ Nothing special in readme ... in this repository i just review all the datastruc
 https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B
 git在执行命令`git init`指令的之后就会自动创建一个分支master，master分支和其他的自己新建的分支相比没有什么特殊的地方。
 - 创建分支：  
-git branch <branch name>
-
-- 查看各个分支所指向的对象
-git log --oneline --decorate
-
-- 切换分支
-git checkout <branch name>
-
-- 输出你的提交历史、各个分支的指向以及项目的分支分叉情况。
-git log --oneline --decorate --graph --all
-
-- 查看所有的现有分支
-git branch -a
-
-- 查看更改
-git status
-
-- 查看当前分支
-git branch
-
+git branch <branch name>  
+- 查看各个分支所指向的对象  
+git log --oneline --decorate  
+- 切换分支  
+git checkout <branch name>  
+- 输出你的提交历史、各个分支的指向以及项目的分支分叉情况。  
+git log --oneline --decorate --graph --all  
+- 查看所有的现有分支  
+git branch -a  
+- 查看更改  
+git status  
+- 查看当前分支  
+git branch  
 ## ...or create a new repository on the command line
 
 `echo "# -" >> README.md`
