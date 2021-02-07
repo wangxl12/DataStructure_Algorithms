@@ -1,5 +1,8 @@
 # DataStructure_Algorithms
 Nothing special in readme ... in this repository i just review all the datastructure as well as algorithms needed in graduate MBA
+# Git分支简介
+
+https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B
 ## ...or create a new repository on the command line
 
 `echo "# -" >> README.md`
