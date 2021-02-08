@@ -27,10 +27,8 @@ https://www.it1352.com/798309.html
 `git branch -a`  
 - 查看更改  
 `git status`  
-- 查看当前分支  
-`git branch`  
-- 切换分支  
-`git switch <branch name>`  
+- 使用git pull origin main:main [rejected]，（non-fast-forward），而使用git push -u origin main提示要pull如何解决
+提示要pull说明已经有人将远程的代码更改了，但是自己本地的代码还没有同步，所以需要pull过来，但是使用git pull origin main:main会拒绝，直接使用git push 又会报错没有upstream branch，这个时候直接使用`git pull origin main`即可，不用后面添加一个：main，然后再`git push -u origin main`，然后就成功了。这里我不用--rebase，是因为不想 将所有的分支合成一条。
 - 切换分支，如果分支不存在，先创建一个分支，然后再切换  
 `git switch -c <branch name>`或者`git checkout -b`  
 - 查看本地所有分支  
@@ -47,7 +45,7 @@ https://www.it1352.com/798309.html
 `git branch (-m | -M) <oldbranch> <newbranch>`# -M表示强制重命名  
 - 如果使用git pull origin main:main报错，使用下面的语句：  
 `git pull --rebase origin main` # 相当于`git fetch`+`git rebase`  
-或者使用  `git branch --set-upstream branch-name origin/branch-name`这一句就是关联本地分支和远程分支  
+或者使用  `git branch --set-upstream branch-name origin/branch-name`这一句就是关联本地分支和远程分支  （已经弃用，使用git push -u origin main） 
 ## ...or create a new repository on the command line
 
 `echo "# -" >> README.md`
