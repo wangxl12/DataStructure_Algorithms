@@ -47,6 +47,7 @@ https://www.it1352.com/798309.html
 `git branch (-m | -M) <oldbranch> <newbranch>`# -M表示强制重命名  
 - 如果使用git pull origin main:main报错，使用下面的语句：  
 `git pull --rebase origin main` # 相当于`git fetch`+`git rebase`  
+或者使用  `git branch --set-upstream branch-name origin/branch-name`这一句就是关联本地分支和远程分支  
 ## ...or create a new repository on the command line
 
 `echo "# -" >> README.md`
