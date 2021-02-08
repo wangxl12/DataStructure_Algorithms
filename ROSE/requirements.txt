@@ -1,3 +1,0 @@
-Pillow
-playsound
-pypiwin32
