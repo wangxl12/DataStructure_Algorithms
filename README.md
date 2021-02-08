@@ -46,6 +46,16 @@ https://www.it1352.com/798309.html
 - 如果使用git pull origin main:main报错，使用下面的语句：  
 `git pull --rebase origin main` # 相当于`git fetch`+`git rebase`  
 或者使用  `git branch --set-upstream branch-name origin/branch-name`这一句就是关联本地分支和远程分支  （已经弃用，使用git push -u origin main） 
+
+# 一个实例  
+1. 先init->add->commit->branch -M main->remote add->push -u origin main，之前已经在GitHub上将readme文件更改了，所以这里报错，提示要先pull。  
+2. 按照提示，输入git pull origin main，报错fatal: refusing to merge unrelated histories，使用git pull origin main:main情理之中会rejected，上午找到了解决方法：$git pull origin main --allow-unrelated-histories，问题更加严重了，使用push还是提示要pull，使用pull说有冲突未解决自动退出。同时分支名由main->main|MERGING。然后查看git status发现有一个文件和远程的一个文件名相同，然后想当然的将本地的那个文件删掉，重新status发现报错更离谱，然后不得不将.git文件删除，重新来  
+3. 重新来到了git pull origin main，报错fatal: refusing to merge unrelated histories，但是我本地没有和远程冲突的文件了，所以我重新试了一下git pull origin main --allow-unrelated-histories，这次成功了，而且没有将分支名后面添加|MERGING，重新push，成功。  
+
+# 解决删除问题  
+git rm --cached -r useless ## -r参数删除目录，如果要删除文件，删除参数-r,将useless改为需要删除的文件名，这里的useless是需要删除的目录名  
+git commit -m "remove directory from remote repository"  
+git push  
 ## ...or create a new repository on the command line
 
 `echo "# -" >> README.md`
