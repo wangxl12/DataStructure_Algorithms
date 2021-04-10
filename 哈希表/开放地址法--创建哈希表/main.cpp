@@ -13,6 +13,9 @@ typedef struct {
 } HASH;
 
 HASH *initHash() {
+    /**
+     * 初始化函数
+     */
     HASH *map = (HASH *) malloc(sizeof(HASH));
     map->arr = (int *) malloc(sizeof(int) * base);
     for (int i = 0; i < base; i++) {
@@ -22,6 +25,9 @@ HASH *initHash() {
 }
 
 int exists(HASH *map, int key) {
+    /**
+     * 判断散列表中是否存在某键值，存在则返回其索引值
+     */
     if (key < 0) {
         printf("the value of key must >= 0!");
         exit(-1);
@@ -33,10 +39,16 @@ int exists(HASH *map, int key) {
 }
 
 int hashFunction(int key) {
+    /**
+     * 哈希函数
+     */
     return key % base;
 }
 
 HASH *add(HASH *map, int key) {
+    /**
+     * 添加键key到哈希表中
+     */
     if (exists(map, key) == -1) {  // 如果不存在，就添加
         int p = hashFunction(key);
         if (map->arr[p % base] != -1) { // 如果待插入的位置已有元素，则往后移动
@@ -56,6 +68,9 @@ HASH *add(HASH *map, int key) {
 }
 
 HASH *remove(HASH *map, int key) {
+    /**
+     * 删除哈希表中的键key
+     */
     int index = exists(map, key);
     if (index != -1) {
         map->arr[index] = -1;
@@ -64,18 +79,24 @@ HASH *remove(HASH *map, int key) {
 }
 
 void freeHash(HASH *map) {
+    /**
+     * 释放堆栈地址空间
+     */
     free(map->arr);
     free(map);
 }
 
 void display(HASH *map) {
+    /**
+     * 打印数据
+     */
     for (int i = 0; i < base; i++) {
         printf("%d ", map->arr[i]);
     }
     printf("\n");
 }
 
-int main() {
+int main() {  // 测试样例
     HASH *obj = initHash();
     add(obj, 4);
     add(obj, 12);
