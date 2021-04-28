@@ -42,10 +42,13 @@ void DFS_graph(GraphNode* Graph[], int v0){
         visited[tmp->label] = true;
         // push neighbors
         for(int i = 0; i < tmp->neighbors.size(); i++){
-            if(!visited[tmp->neighbors[i]->label])  // 如果没有遍历过
+            if(!visited[tmp->neighbors[i]->label]) {  // 如果没有遍历过
                 stack.push_back(tmp->neighbors[i]);  // 将邻接点压栈
+                visited[tmp->neighbors[i]->label] = true; // 防止出现邻结点暂未被访问，但是已经处于队列中，这样容易重复入队
+            }
         }
     }
+    cout << endl;
 }
 
 int main(){
@@ -58,6 +61,7 @@ int main(){
     Graph[1]->neighbors.push_back(Graph[2]);
     Graph[2]->neighbors.push_back(Graph[3]);
     Graph[3]->neighbors.push_back(Graph[4]);
+    Graph[3]->neighbors.push_back(Graph[2]);
     Graph[4]->neighbors.push_back(Graph[3]);
     display(Graph);
     DFS_graph(Graph, 1);
